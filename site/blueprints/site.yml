@@ -1,0 +1,61 @@
+title: Home
+
+columns:
+  left:
+    width: 1/2
+    sections:
+      episodes:
+        headline: Episodes
+        type: pages
+        status: all
+        info: "{{ page.intendedTemplate }}"
+        image: false
+        templates:
+          - episode
+      slideshow:
+        type: files
+        headline: Slideshow
+        info: "{{ file.dimensions }}"
+        template: slideshow
+
+  right:
+    width: 1/2
+    fields:
+      description:
+        label: Description
+        type: text
+      header_items:
+        label: Header Items
+        type: structure
+        max: 4
+        fields:
+          text:
+            label: Text
+            type: text
+      subscribe:
+        label: Subscribe
+        type: structure
+        fields:
+          text:
+            label: Text
+            type: text
+          link:
+            label: Link
+            type: url
+      support:
+        label: Support
+        type: structure
+        fields:
+          text:
+            label: Text
+            type: text
+          link:
+            label: Link
+            type: url
+      ingredients:
+        label: Ingredients
+        type: structure
+        fields:
+          text:
+            label: Ingredient
+            type: text
