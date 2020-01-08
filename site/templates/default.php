@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <?= css(['assets/css/main.css', '@auto']) ?>
         <?= css(['assets/css/font.css', '@auto']) ?>
-        <link rel="shortcut icon" type="image/png" href="<?php foreach($episode->files()->template('favicon') as $file): ?><?= $file->url() ?><?php endforeach ?>">
+        <link rel="shortcut icon" type="image/png" href="<?php foreach($site->files()->template('favicon') as $file): ?><?= $file->url() ?><?php endforeach ?>">
 
         <script>
             const slideshowImages = [
