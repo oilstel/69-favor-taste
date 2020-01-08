@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <?= css(['assets/css/main.css', '@auto']) ?>
         <?= css(['assets/css/font.css', '@auto']) ?>
-        <link rel="shortcut icon" type="image/png" href="<?= url('assets/images/favicon.png') ?>">
+        <link rel="shortcut icon" type="image/png" href="<?php foreach($episode->files()->template('favicon') as $file): ?><?= $file->url() ?><?php endforeach ?>">
 
         <script>
             const slideshowImages = [
@@ -76,17 +76,21 @@
                                         </audio> 
                                     </p>
 
-                                    <div class="meta-links"><span id="show-notes-button" data-target="show-notes-<?= $position ?>" onclick="toggleEl(this, this.dataset.target);">Show Notes</span> <span id="transcript-button" data-target="transcript-<?= $position ?>" onclick="toggleEl(this, this.dataset.target);">Transcript</span></div>
+                                    <div class="meta-links"><?php if ($episode->toggle_show_notes() == "true"): ?><span id="show-notes-button" data-target="show-notes-<?= $position ?>" onclick="toggleEl(this, this.dataset.target);">Show Notes</span><?php endif ?> <?php if ($episode->toggle_transcript() == "true"): ?><span id="transcript-button" data-target="transcript-<?= $position ?>" onclick="toggleEl(this, this.dataset.target);">Transcript</span></div><?php endif ?>
 
+                                    <?php if ($episode->toggle_show_notes() == "true"): ?>
                                     <div id="show-notes-<?= $position ?>" class="meta-section" style="display: none;">
                                     <?= $episode->show_notes()->kt()  ?>
                                     </div>
+                                    <?php endif ?>
 
                                     <?= $episode->index() ?>
 
+                                    <?php if ($episode->toggle_transcript() == "true"): ?>
                                     <div id="transcript-<?= $position ?>" class="meta-section" style="display: none;">
                                         <?= $episode->transcript()->kt() ?>
                                     </div>
+                                    <?php endif ?>
                                 </article>
                             </section>
                         <?php endforeach ?>

@@ -17,6 +17,11 @@ columns:
         headline: Slideshow
         info: "{{ file.dimensions }}"
         template: slideshow
+      favicon:
+        type: files
+        headline: Favicon
+        info: "{{ file.dimensions }}"
+        template: favicon
 
   right:
     width: 1/2
