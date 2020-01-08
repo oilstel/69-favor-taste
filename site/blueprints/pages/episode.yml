@@ -23,24 +23,24 @@ columns:
         label: Toggle Transcript
         type: toggle
         default: true
-    right:
-      width: 1/3
-      sections:
-        episode_audio:
-          type: files
-          headline: Episode
-          info: "{{ file.dimensions }}"
-          template: audio
-          max: 1
-        social_image:
-          type: files
-          headline: Social Image
-          layout: cards
-          info: "{{ file.dimensions }}"
-          template: image
-          max: 1
-        episode_images:
-          type: files
-          headline: Images
-          info: "{{ file.dimensions }}"
-          template: image
+  right:
+    width: 1/3
+    sections:
+      episode_audio:
+        type: files
+        headline: Episode
+        info: "{{ file.dimensions }}"
+        template: audio
+        max: 1
+      social_image:
+        type: files
+        headline: Social Image
+        layout: cards
+        info: "{{ file.dimensions }}"
+        template: image
+        max: 1
+      episode_images:
+        type: files
+        headline: Images
+        info: "{{ file.dimensions }}"
+        template: image
