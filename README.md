@@ -3,5 +3,5 @@
 Site and Kirby CMS for 69 Favor Taste.
 
 
-### Important:
+### Setup:
 Remember to manually create a empty /content/home/ dir to initialize Kirby.
