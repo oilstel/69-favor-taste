@@ -23,7 +23,6 @@ columns:
         info: "{{ file.dimensions }}"
         template: favicon
         max: 1
-
   right:
     width: 1/2
     fields:

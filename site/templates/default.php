@@ -72,7 +72,7 @@
                                         <span class="button" data-episode="episode-<?= $position ?>" onclick="play(this, this.dataset.episode);">Play</span>
                                         <span class="button" id="rewind" data-episode="episode-<?= $position ?>" onclick="rewind(this.dataset.episode);"></span>
                                         <audio controls id="episode-<?= $position ?>">
-                                            <source src="<?php foreach($episode->files()->template('episode') as $file): ?><?= $file->url() ?><?php endforeach ?>" type="audio/mpeg">
+                                            <source src="<?php foreach($episode->files()->template('audio') as $file): ?><?= $file->url() ?><?php endforeach ?>" type="audio/mpeg">
                                         </audio> 
                                     </p>
 
