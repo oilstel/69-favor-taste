@@ -199,6 +199,34 @@ article .meta-section img {
     border-top: 3px double #a7a7a7;
 }
 
+#ticker {
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+#ticker p {
+    -moz-animation: marquee 20s linear infinite;
+    -webkit-animation: marquee 20s linear infinite;
+    animation: marquee 20s linear infinite;
+}
+@-moz-keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+@-webkit-keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+@keyframes marquee {
+0% { 
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%) }
+100% { 
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%); }
+}
+
 /* Mobile */
 @media (max-width: 700px) {
     header {

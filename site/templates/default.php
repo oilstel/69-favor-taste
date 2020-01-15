@@ -51,6 +51,10 @@
                             <h1>69 Favor Taste</h1>
                     
                             <p><?= $site->description() ?></p>
+
+                            <div id="ticker">
+                                <p><?= $site->ticker() ?></p>
+                            </div>
                             
                             <div id="info">
                             <?php $items = $site->header_items()->toStructure(); foreach ($items as $item): ?>

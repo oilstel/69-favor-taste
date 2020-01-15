@@ -29,6 +29,9 @@ columns:
       description:
         label: Description
         type: text
+      ticker:
+        label: Ticker
+        type: textarea
       header_items:
         label: Header Items
         type: structure
