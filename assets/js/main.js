@@ -43,17 +43,16 @@ for (var i = 0; i < slideshowImages.length; i++){
 function changeBackgroundImages() {
     img1Fade();
     setTimeout(img2Fade, 100);
+    console.log('hello')
 }
 
 function img1Fade(){
     $('#img1').fadeOut(2000, function(){$('#img1').css({background: 'url(' + randomItem(imageSet1) + ') repeat center center'})});
-    console.log(imageSet1[randomItem(imageSet1)])
     $('#img2').fadeIn(10000);
 }
 
 function img2Fade(){
     $('#img2').fadeOut(2000, function(){$('#img2').css({background: 'url(' + randomItem(imageSet2) + ') repeat center center'})});
-    console.log(imageSet2[randomItem(imageSet2)])
     $('#img1').fadeIn(10000);
 }
 

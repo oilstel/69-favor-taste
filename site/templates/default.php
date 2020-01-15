@@ -114,14 +114,14 @@
                                         </ul>
                                     </section>
 
-                                    <h2>Support</h2>
+                                    <!-- <h2>Support</h2>
                                     <section>
                                         <ul>
                                         <?php $items = $site->support()->toStructure(); foreach ($items as $item): ?>
                                             <li><a href="<?= $item->link() ?>"><?= $item->text() ?></a></li>
                                         <?php endforeach ?>
                                         </ul>
-                                    </section>
+                                    </section> -->
 
                                     <h2>In The Pot</h2>
                                     <section id="recipe">
