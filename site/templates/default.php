@@ -52,9 +52,7 @@
                     
                             <p><?= $site->description() ?></p>
 
-                            <div id="ticker">
-                                <p><?= $site->ticker() ?></p>
-                            </div>
+                            <marquee scrollamount="5"><?= $site->ticker() ?></marquee>
                             
                             <div id="info">
                             <?php $items = $site->header_items()->toStructure(); foreach ($items as $item): ?>
