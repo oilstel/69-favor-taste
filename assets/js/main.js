@@ -22,24 +22,42 @@ function randomItem(items){
 shuffleIngredients = shuffle(ingredients);
 var fourIngredients = shuffleIngredients.slice(0, 4);
 
-shuffleImages = shuffle(slideshowImages);
-console.log(shuffleImages[0]);
-document.querySelector('#slideshow').style.background = `url('${shuffleImages[0]}') repeat center center`
+imageSet1 = [],
+imageSet2 = [];
+var currentImageSet1 = 0;
+var currentImageSet2 = 0;
 
-// fourIngredients.map(i => {
-//     console.log(i);
-//     var recipeEl = document.getElementById('recipe');
-//     var div = document.createElement("div");
-//     div.innerHTML = randomItem(unicodes) + ' ' + i;
-//     recipeEl.appendChild(div);
-// });
+// Create two image arrays out of slideshowImages for slideshow cross dissolve
+for (var i = 0; i < slideshowImages.length; i++){
+    if ((i + 2) % 2 == 0) {
+        imageSet2.push(slideshowImages[i]);
+    }
+    else {
+        imageSet1.push(slideshowImages[i]);
+    }
+}
 
-// for (var i = 0; i < 2000; i++) {
-//     var patternEl = document.getElementById('egg');
-//     var span = document.createElement("span");
-//     span.innerHTML = randomItem(unicodes) +  ' ' + randomItem(ingredients) + ' ';
-//     patternEl.appendChild(span);
-// } 
+// document.querySelector('#img1').style.background = `url('${randomItem(imageSet1)}') repeat center center`;
+// document.querySelector('#img2').style.background = `url('${randomItem(imageSet2)}') repeat center center`;
+
+function changeBackgroundImages() {
+    img1Fade();
+    setTimeout(img2Fade, 100);
+}
+
+function img1Fade(){
+    $('#img1').fadeOut(2000, function(){$('#img1').css({background: 'url(' + randomItem(imageSet1) + ') repeat center center'})});
+    console.log(imageSet1[randomItem(imageSet1)])
+    $('#img2').fadeIn(10000);
+}
+
+function img2Fade(){
+    $('#img2').fadeOut(2000, function(){$('#img2').css({background: 'url(' + randomItem(imageSet2) + ') repeat center center'})});
+    console.log(imageSet2[randomItem(imageSet2)])
+    $('#img1').fadeIn(10000);
+}
+
+setInterval(changeBackgroundImages, 100);
 
 function generateRecipe() {
     var recipeEl = document.getElementById('recipe');
@@ -97,33 +115,10 @@ function play(el, epi){
     }
 }
 
-// function playSymbol(epi){
-//     var symbol = document.getElementById(epi + '-symbol');
-//     symbol.innerHTML = randomItem(unicodes);
-//     console.log(randomItem(unicodes));
-// }
-
 function rewind(epi) {
     var epi_el = document.getElementById(epi);
     epi_el.currentTime -= 30.0;
 }
-
-// document.getElementById("show-notes-button").onclick = function() { 
-//     toggleEl(this, this.dataset.target);
-// }
-
-// document.getElementById("transcript-button").onclick = function() { 
-//     toggleEl(this, this.dataset.target);
-// }
-
-// function yourFunction(symbol){
-//     // do whatever you like here
-//     console.log(randomItem(unicodes));
-    
-//     symbol.innerHTML = randomItem(unicodes)
-
-//     setTimeout(yourFunction, 5000);
-// }
 
 function toggleEl(button, el) {
     var x = document.getElementById(el);

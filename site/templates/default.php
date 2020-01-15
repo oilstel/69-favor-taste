@@ -33,7 +33,14 @@
     <body>
         <div id="slideshow">
             <a href="#home" id="enter-button">Enter <span class="unicode" id="unicode-intro"></span> Favor Taste</a><br />
+            <div id="img1"></div>
+            <div id="img2"></div>
         </div>
+
+        <div class="inside" >
+        <div id="bImg2"></div>    
+        <div id="bImg3"></div>    
+    </div>   
 
         <div id="home">
             <div id="frame">
@@ -133,6 +140,7 @@
             </div>
         </div>
 
+        <?= js(['assets/js/jquery-3.4.1.min.js', '@auto']) ?>
         <?= js(['assets/js/main.js', '@auto']) ?>
     </body>
 </html>

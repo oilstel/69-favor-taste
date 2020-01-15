@@ -58,6 +58,27 @@ figure {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #f0e71d;
+}
+#img1 {
+    height: 100vh;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    z-index: 3; 
+    position: absolute;
+    background-size: contain;
+}
+#img2 {
+    height: 100vh;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    z-index: 2; 
+    position: absolute;
+    background-size: contain;
 }
 #enter-button {
     border: 3px double #000;
@@ -68,11 +89,34 @@ figure {
     display: inline-flex;
     background: #fff;
     color: #000;
+    display: absolute;
+    z-index: 4;
 }
 #enter-button:hover {
     color: #000;
     background: #f0e71d;
 }
+
+.inside {
+    background:url(top_01.jpg) no-repeat center top ;
+   }
+   
+   
+   #bImg2 {
+   position: absolute;
+   top: 0px;
+   width: 100%;
+   background:url(top_02.jpg) no-repeat center top ;
+    display: none;
+   }
+   
+     #bImg3 { 
+   position: absolute;
+   top: 0px;
+   width: 100%;
+   background:url(top_03.jpg) no-repeat center top ;
+    display: none;
+   }
 
 /* Main */
 main {
