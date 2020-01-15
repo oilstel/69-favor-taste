@@ -97,33 +97,12 @@ figure {
     background: #f0e71d;
 }
 
-.inside {
-    background:url(top_01.jpg) no-repeat center top ;
-   }
-   
-   
-   #bImg2 {
-   position: absolute;
-   top: 0px;
-   width: 100%;
-   background:url(top_02.jpg) no-repeat center top ;
-    display: none;
-   }
-   
-     #bImg3 { 
-   position: absolute;
-   top: 0px;
-   width: 100%;
-   background:url(top_03.jpg) no-repeat center top ;
-    display: none;
-   }
-
 /* Main */
 main {
     /* border: 2px double #000; */
     display: block;
     margin: .5em 1em 1em 1em;
-    grid-template-columns: 1fr 200px;
+    grid-template-columns: 2fr 1fr;
     column-gap: 1em;
     display: grid;
 }
