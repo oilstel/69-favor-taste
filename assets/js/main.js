@@ -32,7 +32,7 @@ var currentImageSet2 = 0;
 // Create two image arrays out of slideshowImages for slideshow cross dissolve
 for (var i = 0; i < slideshowImages.length; i++){
     if ((i + 2) % 2 == 0) {
-        imageSet3.push(slideshowImages[i]);
+        imageSet2.push(slideshowImages[i]);
     }
     else {
         imageSet1.push(slideshowImages[i]);
