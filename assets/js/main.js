@@ -22,6 +22,8 @@ function randomItem(items){
 shuffleIngredients = shuffle(ingredients);
 var fourIngredients = shuffleIngredients.slice(0, 4);
 
+
+// Slideshow
 imageSet1 = [],
 imageSet2 = [];
 var currentImageSet1 = 0;
@@ -30,7 +32,7 @@ var currentImageSet2 = 0;
 // Create two image arrays out of slideshowImages for slideshow cross dissolve
 for (var i = 0; i < slideshowImages.length; i++){
     if ((i + 2) % 2 == 0) {
-        imageSet2.push(slideshowImages[i]);
+        imageSet3.push(slideshowImages[i]);
     }
     else {
         imageSet1.push(slideshowImages[i]);
@@ -42,19 +44,21 @@ document.querySelector('#img2').style.background = `url('${randomItem(imageSet2)
 
 function changeBackgroundImages() {
     img1Fade();
-    setTimeout(img2Fade, 10);
+    img2Fade();
     console.log('changeBackgroundImages')
 }
 
 function img1Fade(){
     $('#img2').fadeIn(5000);
     $('#img1').fadeOut(5000, function(){$('#img1').css({background: 'url(' + randomItem(imageSet1) + ') repeat center center'})});
+    $('#img3').fadeOut(5000, function(){$('#img1').css({background: 'url(' + randomItem(imageSet1) + ') repeat center center'})});
     console.log('img1Fade')
 }
 
 function img2Fade(){
     $('#img1').fadeIn(5000);
     $('#img2').fadeOut(5000, function(){$('#img2').css({background: 'url(' + randomItem(imageSet2) + ') repeat center center'})});
+    $('#img3').fadeOut(5000, function(){$('#img2').css({background: 'url(' + randomItem(imageSet2) + ') repeat center center'})});
     console.log('img2Fade')
 }
 

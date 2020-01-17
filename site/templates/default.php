@@ -9,6 +9,8 @@
         <?= css(['assets/css/font.css', '@auto']) ?>
         <link rel="shortcut icon" type="image/png" href="<?php foreach($site->files()->template('favicon') as $file): ?><?= $file->url() ?><?php endforeach ?>">
 
+        <!-- Made on elliott.computer. A production of Bell Kiosk. January 2020. -->
+
         <script>
             const slideshowImages = [
             <?php $images = $site->files()->template('slideshow'); foreach($images as $image): ?>
@@ -36,10 +38,6 @@
             <div id="img1"></div>
             <div id="img2"></div>
         </div>
-
-        <div class="inside" >
-        <div id="bImg2"></div>    
-        <div id="bImg3"></div>    
     </div>   
 
         <div id="home">
