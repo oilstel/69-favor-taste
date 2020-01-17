@@ -37,26 +37,28 @@ for (var i = 0; i < slideshowImages.length; i++){
     }
 }
 
-// document.querySelector('#img1').style.background = `url('${randomItem(imageSet1)}') repeat center center`;
-// document.querySelector('#img2').style.background = `url('${randomItem(imageSet2)}') repeat center center`;
+document.querySelector('#img1').style.background = `url('${randomItem(imageSet1)}') repeat center center`;
+document.querySelector('#img2').style.background = `url('${randomItem(imageSet2)}') repeat center center`;
 
 function changeBackgroundImages() {
     img1Fade();
-    setTimeout(img2Fade, 100);
-    console.log('hello')
+    setTimeout(img2Fade, 10);
+    console.log('changeBackgroundImages')
 }
 
 function img1Fade(){
-    $('#img1').fadeOut(2000, function(){$('#img1').css({background: 'url(' + randomItem(imageSet1) + ') repeat center center'})});
-    $('#img2').fadeIn(10000);
+    $('#img2').fadeIn(5000);
+    $('#img1').fadeOut(5000, function(){$('#img1').css({background: 'url(' + randomItem(imageSet1) + ') repeat center center'})});
+    console.log('img1Fade')
 }
 
 function img2Fade(){
-    $('#img2').fadeOut(2000, function(){$('#img2').css({background: 'url(' + randomItem(imageSet2) + ') repeat center center'})});
-    $('#img1').fadeIn(10000);
+    $('#img1').fadeIn(5000);
+    $('#img2').fadeOut(5000, function(){$('#img2').css({background: 'url(' + randomItem(imageSet2) + ') repeat center center'})});
+    console.log('img2Fade')
 }
 
-setInterval(changeBackgroundImages, 100);
+setInterval(changeBackgroundImages, 1000);
 
 function generateRecipe() {
     var recipeEl = document.getElementById('recipe');

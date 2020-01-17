@@ -58,7 +58,7 @@ figure {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f0e71d;
+    background: #000;
 }
 #img1 {
     height: 100vh;
@@ -66,7 +66,7 @@ figure {
     left: 0; 
     width: 100%; 
     height: 100%; 
-    z-index: 3; 
+    z-index: 3;
     position: absolute;
     background-size: contain;
 }
