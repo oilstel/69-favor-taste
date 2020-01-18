@@ -35,8 +35,6 @@
     <body>
         <div id="slideshow">
             <a href="#home" id="enter-button">Enter <span class="unicode" id="unicode-intro"></span> Favor Taste</a><br />
-            <div id="img1"></div>
-            <div id="img2"></div>
         </div>
     </div>   
 
