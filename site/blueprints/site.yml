@@ -14,9 +14,10 @@ columns:
           - episode
       slideshow:
         type: files
-        headline: Slideshow
+        headline: Background Image
         info: "{{ file.dimensions }}"
         template: slideshow
+        max: 1
       favicon:
         type: files
         headline: Favicon

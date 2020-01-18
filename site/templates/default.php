@@ -8,6 +8,11 @@
         <?= css(['assets/css/main.css', '@auto']) ?>
         <?= css(['assets/css/font.css', '@auto']) ?>
         <link rel="shortcut icon" type="image/png" href="<?php foreach($site->files()->template('favicon') as $file): ?><?= $file->url() ?><?php endforeach ?>">
+        <!-- twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="<?= $site->title() ?>">
+        <meta name="twitter:description" content="<?= $site->description() ?>">
+        <meta name="twitter:image" content="<?php foreach($site->files()->template('slideshow') as $file): ?><?= $file->url() ?><?php endforeach ?>"/>
 
         <!-- Made on elliott.computer. A production of Bell Kiosk. January 2020. -->
 
