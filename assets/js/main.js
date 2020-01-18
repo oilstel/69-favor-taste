@@ -49,7 +49,7 @@ function randomInt(min, max) { // min and max included
 
 function imageViewer() {
     var image_viewer = document.getElementById("image-viewer");
-    var images = document.getElementsByTagName("article img");
+    var images = document.querySelectorAll("article img");
 
     [].slice.call(images).forEach(function ( img ) {
         // var img = document.getElementById("myImg");
