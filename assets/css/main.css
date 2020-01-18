@@ -8,7 +8,7 @@ body {
     /* background: url('/images/moo.png') repeat center center;
     background-size: 30px 10px; */
 }
-body, h1, h2, h3, h4, a, ul, ol li, p, figure {
+body, h1, h2, h3, h4, a, ul, ol, li, p, figure {
     font-family: 'ProggyCleanTT', monospace;
     font-size: 16px;
     font-weight: normal;
@@ -20,8 +20,13 @@ body, h1, h2, h3, h4, a, ul, ol li, p, figure {
 h1, h3, h4, ul, ol, p, figure {
     margin-bottom: 1em;
 }
-p, ul {
+p, ul, ol {
     line-height: 19px;
+}
+ol, ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 23px;
 }
 section:last-child, ul:last-child, p:last-child {
     margin-bottom: 0 !important;
