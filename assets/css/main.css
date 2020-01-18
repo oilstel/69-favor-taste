@@ -53,6 +53,7 @@ figure {
     margin: 0;
     padding: 0;
 }
+#enter-button, .button {cursor: pointer;}
 
 /* Intro */
 #slideshow {
