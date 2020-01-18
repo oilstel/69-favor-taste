@@ -10,7 +10,7 @@
         <link rel="shortcut icon" type="image/png" href="<?php foreach($site->files()->template('favicon') as $file): ?><?= $file->url() ?><?php endforeach ?>">
         <!-- twitter -->
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="<?= $site->title() ?>">
+        <meta name="twitter:title" content="69 Favor Taste">
         <meta name="twitter:description" content="<?= $site->description() ?>">
         <meta name="twitter:image" content="<?php foreach($site->files()->template('slideshow') as $file): ?><?= $file->url() ?><?php endforeach ?>"/>
 
